@@ -1,0 +1,122 @@
+Project CSC207:Project phase 1 Introduction
+
+This program is about a transit system simulation that tracks and calculates fares for anyone who uses a travel card
+to enter and exit the transit system.
+
+Getting Started:
+Enter commands in events.txt first and run Main.java,
+Make sure you enter the right path for events.txt in Main.java LINE 34
+the instructions for entering commands in event.txt is below.
+
+Our program boundaries:
+0. There should be no empty lines between each command in events.txt.
+1. Every account should have a unique name and unique email.
+2. An account is created by giving name and email.
+3. You can not suspend a card or add balance to a card if that card doesn't exist.
+4. Each card is unique with a unique card ID, a card is created when adding to an account by giving the person's name.
+5. If user taps in twice consecutively (no tap out), the system will charge the maximum fare amount of $6 in default
+   for your first tap-in trip, by the time you tap-in the second time.
+6. You can only create one Admin User Account.
+7. You cannot print daily report before you create a Admin User Account.
+8. If you tap-in at a bus stop and transfer to subway station, but forget to tap-out at the subway station,
+   we charge you bus $2 and subway $6, which is $8 in total.
+9. Any un-matching tap-in/tap-out will result in charging the maximum fare.
+10. When you enter a time in command line the  format is same as 24 hour clock, for example 1622 is four twenty two
+afternoon, 422 is four twenty two early morning.
+11.
+
+
+events.txt commands format followed by an example:
+
+Register a new account:
+RegisterNewAccount UserName Email
+Eg: RegisterNewAccount bill bill@gmail.com
+
+Add a card to an existing account:
+AddCard CardId UserName
+Eg:AddCard 100 bill
+
+Remove a card from an existing account:
+RemoveCard CardID UserName
+Eg:RemoveCard 101 hill
+
+Change an user account's username:
+"ChangeAccountName CurrentUserName NewName"
+Eg:ChangeAccountName hill ray
+
+Suspend a card with given card ID and account Username
+SuspendCard CardID UserName
+Eg:SuspendCard 100 bill
+
+A card taped in a station with date time and card ID information:
+In cardID date time Bus/Subway station/stop name
+Eg:In 100 20180430 0419 Bus Finch
+
+A card taped out a station with date time and card ID information:
+Out cardID date time Bus/Subway station/stop name
+Eg:Out 100 20190430 0430 Subway Finch
+
+Create the one and only admin user account:
+RegisterAdminUserAccount UserName Email
+Eg:RegisterAdminUserAccount god5 dog5@gmail.com
+
+Print daily report of a date:
+PrintDailyReport date
+Eg:PrintDailyReport 20180430
+
+View detail of a account:
+(name, email, cards you have, and card details of each card: cardId, card balance, card is suspened or not)
+ViewAccountDetail UserName Email
+Eg:"iewAccountDetail hill hill@gmail.com
+
+View most recent three trip for a user:
+ViewRecentThreeTrip UserName Email
+Eg:ViewRecentThreeTrip hill hill@gmail.com
+
+Add money to a card in a specific account (the amount can only be 10,20 or 50):
+AddMoney cardId UserName AmountOfMoney
+Eg:AddMoney 101 hill 10
+
+
+Bus and Subway route Map:
+Subway Stations (format: station number.station name):
+Sequenced by station number size(1,2,3,4,5.....) before station name, all station are connected
+1.Spadina
+2.St.George
+3.Museum
+4.Queen'sPark
+5.St.Patrick
+6.Osgoode
+7.St.Andrew
+8.Union
+9.King
+10.Queen
+11.Dundas
+12.College
+13.Wellesley
+14.Bloor-Yonge
+15.Sheppard-Yonge
+16.Finch
+
+Bus Stops (format: Stop number.Stop name)
+Sequenced by Stop number size(101,102,103,104 ; 200,201.....) before Stop name
+all stops are connected
+route 1:
+100.Finch
+101.Steeles
+102.Bayview
+103.DonMills
+104.Woodbine
+105.VictoriaPark
+
+note: Subway Station 16.Finch and Bus Stop 100.Finch is the intersection of the bus route and subway route.
+
+
+
+Authors:
+Yun Qi Fang
+Xinchen Cai
+Yun Shan Guan
+Baizhou Xing
+
+

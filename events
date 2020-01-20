@@ -1,0 +1,30 @@
+RegisterAdminUserAccount god5 dog5@gmail.com
+RegisterNewAccount bill bill@gmail.com
+RegisterNewAccount hill hill@gmail.com
+RegisterNewAccount Daniel Daniel@gmail.com
+AddCard 100 bill
+AddCard 101 hill
+RemoveCard 101 hill
+AddCard 102 Daniel
+AddCard 103 Daniel
+In 100 20180430 0419 Bus Finch
+Out 100 20180430 0430 Subway Finch
+In 103 20181102 0825 Subway Finch
+Out 103 20181102 0828 Subway Finch
+Out 100 20181210 0906 Bus Finch
+In 100 20181210 0913 Subway Finch
+In 102 20190531 0430 Subway Union
+Out 102 20190531 0527 Subway Finch
+In 102 20190531 0529 Bus Finch
+Out 102 20190531 0645 Bus Bayview
+In 102 20190609 0922 Bus Woodbine
+Out 102 20190609 1017 Bus Finch
+In 102 20190609 1121 Subway Finch
+Out 102 20190609 1130 Bus Sheppard-Yonge
+ChangeAccountName hill ray
+SuspendCard 100 bill
+PrintDailyReport 20180430
+viewMyCardCollection ray hill@gmail.com
+ViewAccountDetail ray hill@gmail.com
+ViewRecentThreeTrip ray hill@gmail.com
+AddMoney 101 ray 10
